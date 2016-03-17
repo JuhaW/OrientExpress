@@ -7,7 +7,7 @@ bl_info = {
 	"description": "Objects local rotations",
 	"warning": "beta",
 	"wiki_url": "",
-	"category": "",
+	"category": "Object",
 }
 
 
