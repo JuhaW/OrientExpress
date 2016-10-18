@@ -36,7 +36,7 @@ class RotatePanel(bpy.types.Panel):
 	bpy.types.Scene.boolx = bpy.props.BoolProperty(default = False)
 	bpy.types.Scene.booly = bpy.props.BoolProperty(default = False)
 	bpy.types.Scene.boolz = bpy.props.BoolProperty(default = False)
-<<<<<<< HEAD
+
 	#LOCATION
 	bpy.types.Scene.locx = bpy.props.FloatProperty(default = 1, step = .1)
 	bpy.types.Scene.locy = bpy.props.FloatProperty(default = 1, step = .1)
@@ -48,20 +48,15 @@ class RotatePanel(bpy.types.Panel):
 	bpy.types.Scene.dim_apply_scale = bpy.props.BoolProperty(default = True)
 	bpy.types.Scene.dim_scale = bpy.props.BoolProperty(default = False, description ='Scale instead of add')
 	bpy.types.Scene.dim_proportional = bpy.props.BoolProperty(default = False, description ='Proportional, all axes together')
-=======
->>>>>>> dc586418027ecab30c6dd017e34f6d9e5c3e0b76
-	
+
 	xyz = ['x','y','z']
 	
 	def draw(self, context):
 		layout = self.layout
 		row = layout.row(align = True)
-<<<<<<< HEAD
-		s = context.scene
-		
-=======
 
->>>>>>> dc586418027ecab30c6dd017e34f6d9e5c3e0b76
+		s = context.scene
+
 		for j,i in enumerate(self.v):
 			
 			#row.label('Rotate ' + self.r[j]+': ' + str(RotateX.xyz[i]*90) + "\xb0")
@@ -72,12 +67,11 @@ class RotatePanel(bpy.types.Panel):
 			row.prop(context.scene, 'bool' +self.xyz[j], '', icon = 'MANIPUL')
 	
 			row.prop(context.scene, 'rot'+ self.xyz[j],'') #"\xb0")
-			
-<<<<<<< HEAD
+
 			#row.operator('rotate.x', text ="").axis =	((i,0,0))
-=======
+
 			#row.operator('rotate.x', text ="").axis =  ((i,0,0))
->>>>>>> dc586418027ecab30c6dd017e34f6d9e5c3e0b76
+
 			row.operator('rotate.x', text ="", icon = 'TRIA_LEFT').axis =  ((i,0,0))
 
 			row.operator('rotate.x', text ="", icon = 'TRIA_RIGHT').axis = ((i,1,0))
@@ -90,7 +84,6 @@ class RotatePanel(bpy.types.Panel):
 		row = layout.row()
 		row.operator('orientation.create', icon = 'SNAP_SURFACE')
 		#row.operator('rotate.x', 'Reset values').axis = ((0,0,0))
-<<<<<<< HEAD
 		
 		#LOCATION
 		row = layout.row()
@@ -195,9 +188,7 @@ class Location(bpy.types.Operator):
 		
 		return {'FINISHED'}
 	
-=======
 
->>>>>>> dc586418027ecab30c6dd017e34f6d9e5c3e0b76
 class Orientation_create(bpy.types.Operator):		
 	"""Select objects, Edit mode select geometry where to align transformation of the selected objects"""
 	bl_idname = "orientation.create"
@@ -228,10 +219,6 @@ class Orientation_create(bpy.types.Operator):
 
 		return {'FINISHED'}
 		
-<<<<<<< HEAD
-=======
-		
->>>>>>> dc586418027ecab30c6dd017e34f6d9e5c3e0b76
 
 		
 class Object_create_empty(bpy.types.Operator):		
